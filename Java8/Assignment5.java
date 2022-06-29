@@ -1,30 +1,34 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+package TDDAssignment;
 
-public class Assignment5 {
+import java.util.Scanner;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		  String []s={"vinod", "shubham","bhupeshqw","akash"};
-		  List<Integer> list1= new ArrayList<>();
+public class Assignment5 
+{
+	public static boolean ispaytho()
+	{
+		Scanner sc = new Scanner(System.in);
+		int a[]=new int[3];
+		for (int i = 0; i < a.length; i++) 
+		{
+			a[i]=sc.nextInt();
+		}
 		
-		 for(String i: s)
-		 {
-			 int count=0;
-			char[]ch=i.toCharArray();
-			
-			for( char v:ch)
+		for (int i = 0; i < a.length; i++) 
+		{
+			for (int j = i+1; j < a.length; j++) 
 			{
-				count++;
+				for (int k = j+1; k < a.length; k++)
+				{
+					if(a[i]*a[i]==a[j]*a[j]+a[k]*a[k] || a[j]*a[j]==a[i]*a[i]+a[k]*a[k] || a[k]*a[k]==a[i]*a[i]+a[j]*a[j])
+					{
+						return true;
+						
+					}
+					
+				}
 			}
-			list1.add(count);
-		 }
-
-		Integer maximum1= list1.stream().max((e1,e2)->e1.intValue()>e2.intValue()?1:-1).get();
-		 int in=list1.indexOf(maximum1);
-		 System.out.println(s[in]);
-		 System.out.println(maximum1);
+		}
+		return false;
 	}
 
 }

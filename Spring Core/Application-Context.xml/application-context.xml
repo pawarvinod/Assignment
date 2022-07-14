@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="assi1Bean" class="Com.Spring.Assignment1">
+		<property name="aid" value="1015153"></property>
+		<property name="aName" value="Vinod Pawar"></property>
+		<property name="askil" value="Advance Java"></property>
+	</bean>
+	
+	<bean id="assi2beans" class="Assignment2.Assi2Avrage">
+		<constructor-arg>
+	<array>	
+	<value>88</value> 
+	<value>40</value> 
+	<value>73</value> 
+	<value>94</value> 
+	<value>66</value> 
+	<value>78</value>
+	<value>75</value> 
+	</array>	
+	</constructor-arg>
+		
+		
+	</bean>
+	<!-- Assignment 3 -->
+	<bean id="bean3" class="Assignment3.Ass3EMI">
+		<property name="roi" value="10"></property>
+		
+	</bean>
+	<!-- assignment 8 -->
+	<bean id="itembean" class="Assignment8.Assi8Item">
+	<constructor-arg >
+	<list> 
+	<value>laptop</value> 
+	<value>mouse</value> 
+	<value>keyboard</value> 
+	<value>charger</value>
+	</list>
+	</constructor-arg>
+	</bean>
+	<!-- Assignement 5 -->
+	
+	<bean id="assi5bean" class="Assignment5.Assi5">
+	<constructor-arg >
+	<list>
+	<value>10</value> 
+	<value>20</value> 
+	<value>40</value> 
+	<value>50</value> 
+	<value>60</value> 
+	<value>30</value> 
+	<value>70</value>
+	<value>80</value> 
+	</list> 
+	</constructor-arg>
+		</bean>
+		
+		<!-- Assignment 6 -->
+		
+		<bean id="bean6" class="Assignment6.Assi6">
+		
+	<constructor-arg>
+		<array>
+		
+	<value>vinod</value> 
+	<value>akash</value> 
+	<value>akshay</value> 
+	<value>shubham</value> 
+	<value>prasad</value> 
+	<value>pawar</value>
+	<value>ytr</value> 
+		
+		</array>	
+	</constructor-arg>
+		
+	</bean>
+	
+	<!-- Assignment 7 -->
+	<bean id="bean72" class="Assignment7.Assi7class2">		
+	<constructor-arg>
+	<array>	
+	<value>10</value> 
+	<value>40</value> 
+	<value>23</value> 
+	<value>54</value> 
+	<value>56</value> 
+	<value>78</value>
+	<value>9</value> 
+	</array>	
+	</constructor-arg>		
+	</bean>
+	
+	
+	<!-- Assignment 7 -->
+	
+	<bean id="user" class="Assignment9.Assi9User">		
+	<property name="cities" value="Sambhajinagar"></property>	
+	<property name="distance" value="250"></property>
+	</bean>
+	
+	<bean id="bean7" class="Assignment7.Assi7class1">	
+	<constructor-arg>
+	<array>	
+	<value>24</value> 
+	<value>440</value> 
+	<value>23</value> 
+	<value>54</value> 
+	<value>56</value> 
+	<value>78</value>
+	<value>75</value> 
+	</array>	
+	</constructor-arg>
+	<constructor-arg ref="bean72"></constructor-arg>
+	</bean>
+	
+	<!-- Assignment 10 -->
+	
+	<bean id="bean10" class="Assignment10.Assi10">
+	<constructor-arg>
+	<map>
+	<entry key="vinod" value="10"></entry>
+	<entry key="akash" value="60"></entry>
+	<entry key="aishvrya" value="70"></entry>
+	<entry key="tushar" value="98"></entry>
+	<entry key="santosh" value="79"></entry>
+	<entry key="vishal" value="65"></entry>
+	</map>
+	</constructor-arg>
+     </bean>
+	
+	<!-- Assignment 12 -->
+	
+	<bean id="bean11" class="Assignment11.Assi11Employee">
+	<property name="eid" value="10"></property>
+	<property name="ename" value="vinod"></property>
+	<property name="dname" value="java"></property>
+	<property name="salary" value="23384"></property>
+     </bean>
+     
+     <bean id="bean12" class="Assignment11.Assi11Employee">
+	<property name="eid" value="11"></property>
+	<property name="ename" value="akash"></property>
+	<property name="dname" value="java"></property>
+	<property name="salary" value="27250"></property>
+     </bean>
+     <bean id="bean13" class="Assignment11.Assi11Employee">
+	<property name="eid" value="13"></property>
+	<property name="ename" value="akshay"></property>
+	<property name="dname" value="paython"></property>
+	<property name="salary" value="20284"></property>
+     </bean>
+     <bean id="bean14" class="Assignment11.Assi11Employee">
+	<property name="eid" value="14"></property>
+	<property name="ename" value="prasad"></property>
+	<property name="dname" value="paython"></property>
+	<property name="salary" value="25000"></property>
+     </bean>
+	
+	
+	<!-- Assignment 11 -->
+	
+	<bean id="bean22" class="Assignment12.Assi12Result">
+	<property name="rrollNo" value="101"></property>
+	<property name="hindi" value="76"></property>
+	<property name="science" value="88"></property>
+	<property name="english" value="99"></property>
+	<property name="math" value="79"></property>
+	<property name="obj1" ref="bean"></property>
+     </bean>
+     
+	<bean id="bean" class="Assignment12.Assi12Student">
+	<property name="sstudentName" value="akash"></property>
+	<property name="srollNo" value="420"></property>
+	<property name="sdob" value="1997-05-23"></property>
+	<property name="sclassName" value="hefshine"></property>
+	 </bean>
+	 
+	 <bean id="bean33" class="Assignment12.Assi12Result">
+	<property name="rrollNo" value="102"></property>
+	<property name="hindi" value="65"></property>
+	<property name="science" value="44"></property>
+	<property name="english" value="67"></property>
+	<property name="math" value="54"></property>
+	<property name="obj1" ref="bean34"></property>
+     </bean>
+     
+	<bean id="bean34" class="Assignment12.Assi12Student">
+	<property name="sstudentName" value="nikhil"></property>
+	<property name="srollNo" value="421"></property>
+	<property name="sdob" value="1997-03-13"></property>
+	<property name="sclassName" value="code ny kiran"></property>
+	 </bean>
+	 
+	 <bean id="bean35" class="Assignment12.Assi12Result">
+	<property name="rrollNo" value="103"></property>
+	<property name="hindi" value="45"></property>
+	<property name="science" value="56"></property>
+	<property name="english" value="67"></property>
+	<property name="math" value="65"></property>
+	<property name="obj1" ref="bean36"></property>
+     </bean>
+     
+	<bean id="bean36" class="Assignment12.Assi12Student">
+	<property name="sstudentName" value="prasad"></property>
+	<property name="srollNo" value="424"></property>
+	<property name="sdob" value="1997-03-13"></property>
+	<property name="sclassName" value="Q spider"></property>
+	 </bean>
+	 <bean id="bean37" class="Assignment12.Assi12Result">
+	<property name="rrollNo" value="104"></property>
+	<property name="hindi" value="78"></property>
+	<property name="science" value="54"></property>
+	<property name="english" value="67"></property>
+	<property name="math" value="87"></property>
+	<property name="obj1" ref="bean38"></property>
+     </bean>
+     
+	<bean id="bean38" class="Assignment12.Assi12Student">
+	<property name="sstudentName" value="akshay"></property>
+	<property name="srollNo" value="420"></property>
+	<property name="sdob" value="1996-05-28"></property>
+	<property name="sclassName" value="velocity"></property>
+	 </bean>
+	 <bean id="bean39" class="Assignment12.Assi12Result">
+	<property name="rrollNo" value="105"></property>
+	<property name="hindi" value="45"></property>
+	<property name="science" value="67"></property>
+	<property name="english" value="76"></property>
+	<property name="math" value="65"></property>
+	<property name="obj1" ref="bean40"></property>
+     </bean>
+     
+	<bean id="bean40" class="Assignment12.Assi12Student">
+	<property name="sstudentName" value="shubham"></property>
+	<property name="srollNo" value="427"></property>
+	<property name="sdob" value="1997-05-08"></property>
+	<property name="sclassName" value="velocity"></property>
+	 </bean>
+	 
+	 <!-- Assignment 13 
+		
+		<bean id="systembean" class="Assignment13.Assi13System">		
+	<constructor-arg>
+	<list>
+	<value>vinod</value> 
+	<value>akash</value> 
+	<value>akshay</value> 
+	<value>shubham</value> 
+	<value>prasad</value> 
+	<value>pawar</value>
+	<value>ytr</value> 
+	</list>	
+	</constructor-arg>		
+	</bean>
+	-->
+	<!-- Assignment 15 Assi15Item item;-->
+		
+	<bean id="itembean11" class="Assignment15.Custmer">
+	<property name="cName" value="akash"></property>
+	<property name="cid" value="101"></property>
+	<property name="caddress" value="Baramati"></property>
+	<property name="item" ref="bean41"></property>
+     </bean>
+     
+	
+	<bean id="bean41" class="Assignment15.Assi15Item">
+	<property name="itemName" value="Laptop"></property>
+	<property name="itemid" value="106868712"></property>
+	<property name="itemPrice" value="57500"></property>
+     </bean>
+     
+	 
+	</beans>

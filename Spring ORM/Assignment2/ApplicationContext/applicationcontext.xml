@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context" 
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
+<property name="url" value="jdbc:mysql://localhost:3306/orm2"></property>
+<property name="username" value="root"></property>
+<property name="password" value="Vinod@1997"></property>
+</bean>
+
+<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+ <property name="dataSource" ref="ds"></property>
+</bean>
+ 
+<bean id="idao" class=" com.yash.dao.ItemDao">
+  <property name="itemtemplete" ref="jdbcTemplate"></property>
+</bean>
+
+<bean id="bdao" class="com.yash.dao.BillDao">
+  <property name="billtemplete" ref="jdbcTemplate"></property>
+</bean>
+
+<bean id="catbean" class="com.yash.dao.CategoryDao">
+  <property name="categorytemplete" ref="jdbcTemplate"></property>
+</bean>
+ 
+ <bean id="subcatbean" class="com.yash.dao.SubCategoryDao">
+  <property name="subcattemple" ref="jdbcTemplate"></property>
+</bean>
+
+ <bean id="ctmerbean" class="com.yash.dao.CustermerDao">
+  <property name="custemplete" ref="jdbcTemplate"></property>
+</bean>
+
+
+<bean id="billitembean" class="com.yash.dao.BillItemDao">
+  <property name="billItemTemplete" ref="jdbcTemplate"></property>
+</bean>
+</beans>

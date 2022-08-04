@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.yash.model.Employee" table="employee">
+  <id name="empid">
+    <generator class="increment"></generator>
+  </id>
+ <property name="empname"></property>
+ <property name="eaddress"></property>
+ <property name="edob"></property>
+ <property name="edoj"></property>
+ <property name="edol"></property>
+ <property name="salary"></property>
+ <property name="designation"></property>
+ <property name="IRMId"></property>
+ <property name="projected"></property>
+
+</class>
+<class name="com.yash.model.Department" table="departmentDao">
+  <id name="deptid">
+    <generator class="increment"></generator>
+  </id>
+ <property name="dname"></property>
+</class>
+<class name="com.yash.model.Project">
+  <id name="Projectid">
+    <generator class="increment"></generator>
+  </id>
+ <property name="projectname"></property>
+ <property name="promempid"></property>
+</class>
+<class name="com.yash.model.BaseLocationName">
+  <id name="baselocationid">
+    <generator class="increment"></generator>
+  </id>
+ <property name="baseLocationName"></property>
+</class>
+</hibernate-mapping>
+
